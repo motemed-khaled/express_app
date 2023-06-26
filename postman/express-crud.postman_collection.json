@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "a49e249b-5cc1-4752-b695-d2f4e9bc9ae7",
+		"name": "express-crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27864105",
+		"_collection_link": "https://interstellar-escape-502498.postman.co/workspace/motemed-khaled~76d7a006-33f9-44b2-843f-380977d5061e/collection/27864105-a49e249b-5cc1-4752-b695-d2f4e9bc9ae7?action=share&creator=27864105&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"motemedkhaled5@gmail.com\",\r\n    \"password\":\" 01Metoo@ \",\r\n    \"confirmBassword\":\" 01Metoo@ \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"motemedkhaled5@gmail.com\",\r\n    \"password\":\"01Metoo@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "catogry",
+			"item": [
+				{
+					"name": "create catogry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk4NmJiMDQxZDQ4OWY1MTIyMTBhZDAiLCJpYXQiOjE2ODc3MTg2NjgsImV4cCI6MTY4NzgwNTA2OH1.NaHgGQ10AVQVJOm7eItsNncO_pK6BvJNTSICAO6aEjw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"computer1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/catogry/64957e753f344eba012fcf9d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"catogry",
+								"64957e753f344eba012fcf9d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all catogry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/catogry?page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"catogry"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific catogry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/catogry/649880d9c6c5ee2527ed983b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"catogry",
+								"649880d9c6c5ee2527ed983b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update catogry",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk4NmJiMDQxZDQ4OWY1MTIyMTBhZDAiLCJpYXQiOjE2ODc3MTg2NjgsImV4cCI6MTY4NzgwNTA2OH0.NaHgGQ10AVQVJOm7eItsNncO_pK6BvJNTSICAO6aEjw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"mac\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/catogry/649880d9c6c5ee2527ed983b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"catogry",
+								"649880d9c6c5ee2527ed983b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete catogry",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk4NmJiMDQxZDQ4OWY1MTIyMTBhZDAiLCJpYXQiOjE2ODc3MTg2NjgsImV4cCI6MTY4NzgwNTA2OH0.NaHgGQ10AVQVJOm7eItsNncO_pK6BvJNTSICAO6aEjw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/catogry/649880d0c6c5ee2527ed9839",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"catogry",
+								"649880d0c6c5ee2527ed9839"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "create product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk4NmJiMDQxZDQ4OWY1MTIyMTBhZDAiLCJpYXQiOjE2ODc3MzYxMTIsImV4cCI6MTY4NzgyMjUxMn0.7YxsxDXp12lS6KxkfCLM9mGVt2fumoYrc_DNddCWk4A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dell\",\r\n    \"price\":5000,\r\n    \"catogry\":\"64988b2b56cba7573fe0555d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get specific product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/product/6498cab5f7e8fbefb6b26ec9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"6498cab5f7e8fbefb6b26ec9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk4NmJiMDQxZDQ4OWY1MTIyMTBhZDAiLCJpYXQiOjE2ODc3MzYxMTIsImV4cCI6MTY4NzgyMjUxMn0.7YxsxDXp12lS6KxkfCLM9mGVt2fumoYrc_DNddCWk4A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dell2\",\r\n    \"price\":6000,\r\n    \"catogry\":\"64988b2b56cba7573fe0555d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/product/6498cab5f7e8fbefb6b26ec9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"6498cab5f7e8fbefb6b26ec9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDk4NmJiMDQxZDQ4OWY1MTIyMTBhZDAiLCJpYXQiOjE2ODc3MzYxMTIsImV4cCI6MTY4NzgyMjUxMn0.7YxsxDXp12lS6KxkfCLM9mGVt2fumoYrc_DNddCWk4A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/product/6498cab5f7e8fbefb6b26ec9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"6498cab5f7e8fbefb6b26ec9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "catogry and subcatogry",
+			"item": [
+				{
+					"name": "get list of products for specific catogry",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "add product to specific catogry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/catogry/64988b2b56cba7573fe0555d/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"catogry",
+								"64988b2b56cba7573fe0555d",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

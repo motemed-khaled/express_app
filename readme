@@ -1,0 +1,9 @@
+to run this server we have to environment
+
+1- development to Explain the error in detail || script to run (npm run start:dev)
+2- production to Explain the error in a simple way || script to run (npm run start:prod)
+
+3 - private routes in catogry and product
+update , create , delete
+
+4 - we have folder postman to explan routes
